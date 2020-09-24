@@ -1,0 +1,256 @@
+
+-------------START---------------
+ i : 0
+S<--->N
+j: 1-- itr: 0
+S<--->O
+j: 2-- itr: 0
+S<--->H
+j: 3-- itr: 0
+S<--->A
+j: 4-- itr: 0
+S<--->R
+j: 5-- itr: 0
+S<--->A
+j: 6-- itr: 0
+S<--->A
+j: 7-- itr: 0
+S<--->A
+j: 1-- itr: 1
+H<--->O
+j: 2-- itr: 1
+H<--->H
+ condition matched
+j: 2-- itr: 2
+I<--->H
+j: 3-- itr: 2
+I<--->A
+j: 4-- itr: 2
+I<--->R
+j: 5-- itr: 2
+I<--->A
+j: 6-- itr: 2
+I<--->A
+j: 7-- itr: 2
+I<--->A
+j: 3-- itr: 3
+N<--->A
+j: 4-- itr: 3
+N<--->R
+j: 5-- itr: 3
+N<--->A
+j: 6-- itr: 3
+N<--->A
+j: 7-- itr: 3
+N<--->A
+j: 4-- itr: 4
+C<--->R
+j: 5-- itr: 4
+C<--->A
+j: 6-- itr: 4
+C<--->A
+j: 7-- itr: 4
+C<--->A
+j: 5-- itr: 5
+H<--->A
+j: 6-- itr: 5
+H<--->A
+j: 7-- itr: 5
+H<--->A
+j: 6-- itr: 6
+A<--->A
+ condition matched
+j: 7-- itr: 7
+N<--->A
+j: 8-- itr: 8
+=========== END ==================
+-------------START---------------
+ i : 1
+H<--->N
+j: 1-- itr: 1
+H<--->O
+j: 2-- itr: 1
+H<--->H
+ condition matched
+j: 2-- itr: 2
+I<--->H
+j: 3-- itr: 2
+I<--->A
+j: 4-- itr: 2
+I<--->R
+j: 5-- itr: 2
+I<--->A
+j: 6-- itr: 2
+I<--->A
+j: 7-- itr: 2
+I<--->A
+j: 3-- itr: 3
+N<--->A
+j: 4-- itr: 3
+N<--->R
+j: 5-- itr: 3
+N<--->A
+j: 6-- itr: 3
+N<--->A
+j: 7-- itr: 3
+N<--->A
+j: 4-- itr: 4
+C<--->R
+j: 5-- itr: 4
+C<--->A
+j: 6-- itr: 4
+C<--->A
+j: 7-- itr: 4
+C<--->A
+j: 5-- itr: 5
+H<--->A
+j: 6-- itr: 5
+H<--->A
+j: 7-- itr: 5
+H<--->A
+j: 6-- itr: 6
+A<--->A
+ condition matched
+j: 7-- itr: 7
+N<--->A
+j: 8-- itr: 8
+=========== END ==================
+-------------START---------------
+ i : 2
+I<--->N
+j: 1-- itr: 2
+I<--->O
+j: 2-- itr: 2
+I<--->H
+j: 3-- itr: 2
+I<--->A
+j: 4-- itr: 2
+I<--->R
+j: 5-- itr: 2
+I<--->A
+j: 6-- itr: 2
+I<--->A
+j: 7-- itr: 2
+I<--->A
+j: 3-- itr: 3
+N<--->A
+j: 4-- itr: 3
+N<--->R
+j: 5-- itr: 3
+N<--->A
+j: 6-- itr: 3
+N<--->A
+j: 7-- itr: 3
+N<--->A
+j: 4-- itr: 4
+C<--->R
+j: 5-- itr: 4
+C<--->A
+j: 6-- itr: 4
+C<--->A
+j: 7-- itr: 4
+C<--->A
+j: 5-- itr: 5
+H<--->A
+j: 6-- itr: 5
+H<--->A
+j: 7-- itr: 5
+H<--->A
+j: 6-- itr: 6
+A<--->A
+ condition matched
+j: 7-- itr: 7
+N<--->A
+j: 8-- itr: 8
+=========== END ==================
+-------------START---------------
+ i : 3
+N<--->N
+ condition matched
+j: 4-- itr: 4
+C<--->R
+j: 5-- itr: 4
+C<--->A
+j: 6-- itr: 4
+C<--->A
+j: 7-- itr: 4
+C<--->A
+j: 5-- itr: 5
+H<--->A
+j: 6-- itr: 5
+H<--->A
+j: 7-- itr: 5
+H<--->A
+j: 6-- itr: 6
+A<--->A
+ condition matched
+j: 7-- itr: 7
+N<--->A
+j: 8-- itr: 8
+=========== END ==================
+-------------START---------------
+ i : 4
+C<--->N
+j: 1-- itr: 4
+C<--->O
+j: 2-- itr: 4
+C<--->H
+j: 3-- itr: 4
+C<--->A
+j: 4-- itr: 4
+C<--->R
+j: 5-- itr: 4
+C<--->A
+j: 6-- itr: 4
+C<--->A
+j: 7-- itr: 4
+C<--->A
+j: 5-- itr: 5
+H<--->A
+j: 6-- itr: 5
+H<--->A
+j: 7-- itr: 5
+H<--->A
+j: 6-- itr: 6
+A<--->A
+ condition matched
+j: 7-- itr: 7
+N<--->A
+j: 8-- itr: 8
+=========== END ==================
+-------------START---------------
+ i : 5
+H<--->N
+j: 1-- itr: 5
+H<--->O
+j: 2-- itr: 5
+H<--->H
+ condition matched
+j: 6-- itr: 6
+A<--->A
+ condition matched
+j: 7-- itr: 7
+N<--->A
+j: 8-- itr: 8
+=========== END ==================
+-------------START---------------
+ i : 6
+A<--->N
+j: 1-- itr: 6
+A<--->O
+j: 2-- itr: 6
+A<--->H
+j: 3-- itr: 6
+A<--->A
+ condition matched
+j: 7-- itr: 7
+N<--->A
+j: 8-- itr: 8
+=========== END ==================
+-------------START---------------
+ i : 7
+N<--->N
+ condition matched
+j: 8-- itr: 8
+=========== END ==================
+ Result: 2
