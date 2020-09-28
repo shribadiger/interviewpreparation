@@ -8,9 +8,9 @@ void merge(std::vector<long long>& Array, int begin, int mid, int end){
     int i=begin;
     int j=mid+1;
     while(i<=mid && j<=end){
-        if(Array[begin]>Array[j]){
+        if(Array[i]>Array[j]){
             temp.push_back(Array[j]);
-            swapCount++;
+            swapCount=swapCount+(mid-i);
             j++;
         }
         else{
@@ -34,8 +34,8 @@ void merge(std::vector<long long>& Array, int begin, int mid, int end){
 }
 void mergeSort(std::vector<long long>& Array, int begin, int end)
 {
+    int mid = (begin+end)/2;
     if(begin<end){
-        int mid = (begin+end)/2;
         mergeSort(Array, begin,mid);
         mergeSort(Array, mid+1, end);
         merge(Array,begin,mid,end);
@@ -51,8 +51,8 @@ int main() {
         for(int i=0;i<n;i++){
             cin>>Array[i];
         }
-        mergeSort(Array,0,n);
-        std::cout<<swapCount;
+        mergeSort(Array,0,n-1);
+        std::cout<<"\n Result : "<<swapCount;
 
 	std::cout<<"\n Array: ";
 	for(int i=0;i<n;i++) {
