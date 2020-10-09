@@ -5,29 +5,34 @@ using namespace std;
 int main() {
 	int length;
 	cin>>length;
+	int m;
+	cin>>m;
 	vector<int> data(0,length);
 	for(int i=0; i<length; i++) {
 		int input;
 		cin>>input;
-		vector.push_back(input);
+		data.push_back(input);
 	}
 
 	int combinations = 0;
 	int globSum = 0;
-	while(combinations < length) {
+	int result=0;
+	while(combinations < length) 
 	{	int sum = globSum;
 		for(int i=combinations; i<length; i++) {
 			sum=globSum+data[i];
 			for(int j=i+1; j<length;j++) {
-				std::cout<<"\t"<<sum<<"+"<<data[j];
+				//std::cout<<"\t"<<sum<<"+"<<data[j];
+				if((sum+data[j])%m > result) {
+					result=(sum+data[j])%m;
+				}	
 			}
-			std::cout<<"\n";
+			//std::cout<<"\n";
 		}
 		globSum=globSum+data[combinations];
-		comninations++;
-		std::cout<<"\n";
+		combinations++;
 			
 	}
-	std::cout<<"\n"<<globSum;
+	std::cout<<"\n Result: "<<result;
 	return 0;
 }
