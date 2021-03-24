@@ -140,3 +140,32 @@ ret = pthread_attr_*(&tattr,SOME_ATRIBUTE_VALUE_PARAMETER);
 ret = pthread_create(&tid, &tattr, start_routine, arg);
 
 ```
+
+## Thread Synchronization ##
+
+### 1) Protecting the Shared resource in Theraded Application
+Usaually threads share the global inforamtion for there exection. If each threads share information and try to modify the informaion may cause inconsistency in data
+To overcome from the data inconsistency we need to use the ``` pthread_mutex_t ```.
+We can initialize the mutex statically and dynamically. Below examples will indicate both ways of using the mutex locks.
+
+```c
+static int glob = 0;
+
+/* Static Mutex Thread created*/
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+static void* threadFunction(void* args) {
+        int loops = *((int*)args);
+        int loc, j;
+
+        pthread_mutex_lock(&mutex);
+        for(j=0; j<loops; j++) {
+                loc=glob;
+                loc++;
+                glob=loc;
+        }
+        pthread_mutex_unlock(&mutex);
+
+        return NULL;
+}
+```
