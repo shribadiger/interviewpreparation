@@ -169,3 +169,13 @@ static void* threadFunction(void* args) {
         return NULL;
 }
 ```
+### 2) Mutex Deadlocks
+Sometimes, a thread needs to simultaneously access two or more different shared
+resources, each of which is governed by a separate mutex. When more than one
+thread is locking the same set of mutexes, deadlock situations can arise. 
+
+| Thread A | Thread B|
+|----------|---------|
+| pthread_mutex_lock(m1)| pthread_mutex_lock(m2)|
+| pthread_mutex_lock(m2)| pthread_mutex_lock(m1) |
+
