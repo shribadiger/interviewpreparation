@@ -179,3 +179,17 @@ thread is locking the same set of mutexes, deadlock situations can arise.
 | pthread_mutex_lock(m1)| pthread_mutex_lock(m2)|
 | pthread_mutex_lock(m2)| pthread_mutex_lock(m1) |
 
+### 3) Dynamically Initialized Mutexs
+The static initializer value PTHREAD_MUTEX_INITIALIZER can be used only for initializing
+a statically allocated mutex with default attributes. In all other cases, we must
+dynamically initialize the mutex using pthread_mutex_init().
+
+```c
+#include <pthread.h>
+int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);
+
+int pthread_mutex_destroy(pthread_mutex_t *mutex);
+```
+### 4) Singaling changes of State: Conditional Variable
+
+
