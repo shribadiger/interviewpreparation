@@ -44,4 +44,18 @@ int pthread_create(pthread_t *threadID,  // Thread ID which going to execute
 3) Thread can call ``` pthread_cancel()``` to terminate
 4) Thread can invoke ``` exit()``` function.
 
+``` c
+ include <pthread.h>
+ void pthread_exit(void *retval);
+```
+
+### 3) Thread ID
+Thread IDs are useful within applications for the following reasons:
+*   Various Pthreads functions use thread IDs to identify the thread on which they
+    are to act. Examples of such functions include ``` pthread_join(), pthread_detach(),
+    ```pthread_cancel()  & pthread_kill()```
+*   In some applications, it can be useful to tag dynamic data structures with the
+    ID of a particular thread. This can serve to identify the thread that created or
+    “owns” a data structure, or can be used by one thread to identify a specific
+    thread that should subsequently do something with that data structure.
 
