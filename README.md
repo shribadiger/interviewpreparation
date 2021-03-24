@@ -31,4 +31,10 @@ pthread_condt | phtread condition variable
 pthread_attr_t | pthread attributes 
 
 ### 1) Pthread Creation
+``` c
+int pthread_create(pthread_t *threadID,  // Thread ID which going to execute
+                    const pthread_attr_t *attr, // Pthread attributes
+                    void*(*start)(void*), // Function which going to execute by pthread
+                    void* args ); // arguments for the thread functions
+```
 
