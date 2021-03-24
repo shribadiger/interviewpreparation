@@ -191,5 +191,15 @@ int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);
 int pthread_mutex_destroy(pthread_mutex_t *mutex);
 ```
 ### 4) Singaling changes of State: Conditional Variable
+A mutex prevents multiple threads from accessing a shared variable at the same
+time. A condition variable allows one thread to inform other threads about
+changes in the state of a shared variable (or other shared resource) and allows the
+other threads to wait (block) for such notification.
+
+Condition variable can be allocated in form of statically and dynamically. 
+
+``` pthread_cond_t cond = PTHREAD_COND_INITIALIZER; ```
+condition variable operate on signal and wait.
+
 
 
