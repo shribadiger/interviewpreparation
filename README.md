@@ -53,7 +53,7 @@ int pthread_create(pthread_t *threadID,  // Thread ID which going to execute
 Thread IDs are useful within applications for the following reasons:
 *   Various Pthreads functions use thread IDs to identify the thread on which they
     are to act. Examples of such functions include ``` pthread_join(), pthread_detach(),
-    ```pthread_cancel()  & pthread_kill()```
+    ```pthread_cancel()  & pthread_kill()
 *   In some applications, it can be useful to tag dynamic data structures with the
     ID of a particular thread. This can serve to identify the thread that created or
     “owns” a data structure, or can be used by one thread to identify a specific
