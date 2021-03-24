@@ -62,3 +62,47 @@ Thread IDs are useful within applications for the following reasons:
     “owns” a data structure, or can be used by one thread to identify a specific
     thread that should subsequently do something with that data structure.
 
+### 4) Join the Terminated Thread
+``` pthread_join() ``` function will wait for the thread to terminate and begin after joing the thread
+``` c
+    include<pthread.h>
+    int pthread_join(pthread_t threadID, void** returnValue);
+ ```
+Example of Thread Join:
+```c
+#include<stdio.h>
+#include<unistd.h>
+#include<pthread.h>
+#include<string.h>
+
+static void* ThreadFunction(void* args) {
+        char* s = (char*) args;
+        printf("%s",s);
+        return (void*) strlen(s);
+}
+
+int main(int argc, char* argv[]) {
+        pthread_t t1;
+        void* res;
+
+        int threadStatus=pthread_create(&t1, NULL, ThreadFunction, "Hello My Thread\n");
+
+        if(threadStatus != 0){
+                printf("[Error]: Failed to create thread\n");
+                exit(-1);
+        }
+
+        printf("\n Message from main() function\n");
+
+        threadStatus = pthread_join(t1, &res);
+
+        if(threadStatus != 0) {
+                printf("[Error]: Failed to pthread_join()\n");
+                exit(-1);
+        }
+
+        printf("\n Thread Returned %ld",(long)res);
+
+        exit(0);
+}
+```
