@@ -106,3 +106,37 @@ int main(int argc, char* argv[]) {
         exit(0);
 }
 ```
+
+### 5) Pthread Detach
+
+If the therad execution not required any return value, we can make that thread as detached by calling the ``` pthread_detach()```
+Once the thread is detached, we can not re-join the thread to get result from the thread execution.
+``` c
+#include<pthread>
+int pthread_detach(pthread_t& id);
+```
+### 6) Pthread Attributes
+Attributes are a way to specify behavior that is different from the default. When a thread is created with pthread_create() or
+when a synchronization variable is initialized, an attribute object can be specified. Note: however that the default atributes 
+are usually sufficient for most applications.
+
+* **Impottant Note**: Attributes are specified only at thread creation time; they cannot be altered while the thread is being used.
+```c
+#include <pthread.h>
+
+pthread_attr_t tattr;
+pthread_t tid;
+void *start_routine;
+void arg
+int ret;
+
+/* initialized with default attributes */
+ret = pthread_attr_init(&tattr);
+
+/* call an appropriate functions to alter a default value */
+ret = pthread_attr_*(&tattr,SOME_ATRIBUTE_VALUE_PARAMETER);
+
+/* create the thread */
+ret = pthread_create(&tid, &tattr, start_routine, arg);
+
+```
