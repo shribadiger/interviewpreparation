@@ -37,4 +37,11 @@ int pthread_create(pthread_t *threadID,  // Thread ID which going to execute
                     void*(*start)(void*), // Function which going to execute by pthread
                     void* args ); // arguments for the thread functions
 ```
+### 2) Pthread Termination
+
+1) Thread can return a value to main thread
+2) Thread can call ``` pthread_exit()``` to terminate
+3) Thread can call ``` pthread_cancel()``` to terminate
+4) Thread can invoke ``` exit()``` function.
+
 
